@@ -1,0 +1,37 @@
+{
+  "name": "book-store-layout",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "start": "browser-sync start --server --files src/**, index.html",
+    "watch": "gulp default",
+    "lint": "eslint ./src",
+    "lint:watch": "esw --watch",
+    "stylelint": "stylelint './src/**/*.css'"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/aloudi/book-store-layout.git"
+  },
+  "author": "aloudi",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com//aloudi/book-store-layout/issues"
+  },
+  "homepage": "https://github.com//aloudi/book-store-layout/#readme",
+  "devDependencies": {
+    "browser-sync": "^2.26.3",
+    "eslint": "^5.6.1",
+    "eslint-watch": "^4.0.2",
+    "gulp": "latest",
+    "gulp-util": "latest",
+    "gulp-sass": "latest",
+    "gulp-coffee": "latest",
+    "gulp-uglify": "latest",
+    "gulp-concat": "latest",
+    "gulp-connect": "latest",
+    "stylelint": "^9.6.0",
+    "stylelint-config-standard": "^18.2.0"
+  }
+}
