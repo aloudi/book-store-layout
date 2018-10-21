@@ -5,6 +5,8 @@ module.exports = {
   plugins: [],
   rules: {
     indentation: 2,
+    "block-closing-brace-newline-before": "always",
+    "rule-empty-line-before": "always",
     "number-leading-zero": null,
     "selector-pseudo-class-no-unknown": [true, {
       ignorePseudoClasses: ["global"]

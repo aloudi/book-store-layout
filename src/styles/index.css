@@ -1,0 +1,129 @@
+body {
+  font-family: "Roboto", sans-serif;
+  line-height: normal; }
+  body p {
+    padding: 0;
+    margin: 0; }
+
+.header-container {
+  align-items: center;
+  background-color: #2f364a;
+  color: #78829d;
+  display: flex;
+  justify-content: space-between;
+  font-size: 12px;
+  height: 45px;
+  width: 100%; }
+
+.header-logo {
+  margin-left: 20px; }
+
+.header-title {
+  display: flex;
+  align-items: center;
+  position: absolute;
+  right: 50%;
+  transform: translate(50%); }
+  .header-title img {
+    position: absolute;
+    height: 12px;
+    width: 12px;
+    left: -14px; }
+
+.header-nav {
+  display: flex;
+  flex-direction: row;
+  align-items: center; }
+  .header-nav a {
+    color: inherit;
+    text-decoration: none;
+    margin: 0 16px; }
+  .header-nav-circle-separator {
+    background-color: black;
+    border-radius: 50%;
+    height: 4px;
+    width: 4px; }
+  .header-nav-profile-dropdown {
+    background-color: #15a4fa;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    height: 100%; }
+    .header-nav-profile-dropdown-profile-photo {
+      margin: 0 12px;
+      border-radius: 50%; }
+    .header-nav-profile-dropdown p {
+      color: #fff; }
+    .header-nav-profile-dropdown-icon {
+      color: #fff;
+      margin: 0 16px;
+      width: 12px;
+      height: 12px;
+      align-self: center; }
+
+main {
+  position: relative;
+  height: 100%; }
+  main aside {
+    height: 100%;
+    width: 200px;
+    background-color: #1f2637;
+    float: left; }
+    main aside section {
+      display: block;
+      margin-bottom: 4px; }
+    main aside .add-book-btn {
+      position: relative;
+      text-decoration: none;
+      display: block;
+      width: 160px;
+      height: 44px;
+      border-radius: 4px;
+      background-color: #f2795a;
+      margin: 35px 20px; }
+      main aside .add-book-btn img {
+        width: 14px;
+        height: 14px;
+        position: absolute;
+        right: 50%;
+        bottom: 50%;
+        transform: translate(50%, 50%); }
+      main aside .add-book-btn span {
+        position: absolute;
+        right: 50%;
+        bottom: 50%;
+        transform: translate(50%, 50%); }
+    main aside .nav-section nav {
+      display: block; }
+  main .main-content {
+    display: block;
+    margin-left: 200px;
+    height: 100%;
+    background-color: slateblue; }
+
+.footer-container {
+  background-color: #181e2c;
+  width: 100%;
+  height: 45px; }
+
+.footer-nav {
+  float: right;
+  height: 100%; }
+  .footer-nav a {
+    position: relative;
+    display: inline-block;
+    height: 100%;
+    width: 55px; }
+    .footer-nav a img {
+      position: absolute;
+      height: 14px;
+      width: 14px;
+      right: 50%;
+      bottom: 50%;
+      transform: translate(50%, 50%); }
+  .footer-nav-help {
+    background-color: #1f2637;
+    color: #fff; }
+  .footer-nav-settings {
+    background-color: #15a4fa;
+    color: #fff; }

@@ -5,13 +5,91 @@
   <meta charset="utf-8" />
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <title>Book Store</title>
-  <meta name="viewport" content="width=device-width, initial-scale=1">
-  <link rel="stylesheet" type="text/css" media="screen" href="main.css" />
-  <script src="main.js"></script>
+  <meta name="viewport" content="width=device-width, height=device-height, initial-scale=1">
+  <link href="https://fonts.googleapis.com/css?family=Roboto" rel="stylesheet">
+  <link rel="stylesheet" type="text/css" media="screen" href="node_modules/normalize.css/normalize.css" />
+  <link rel="stylesheet" type="text/css" media="screen" href="src/styles/index.css" />
+  <script src="src/index.js"></script>
 </head>
 
 <body>
+  <header class="header-container">
+    <div class="header-logo">
+      <p>Logo Placeholder</p>
+    </div>
+    <div class="header-title">
+      <img src="src/assets/book-icon.png" alt="book-icon">
+      <p>MyBookStoreApp</p>
+    </div>
+    <nav class="header-nav">
+      <a href="#0">Help Center</a>
+      <div class="header-nav-circle-separator"></div>
+      <a href="#0">Our Support</a>
+      <div class="header-nav-profile-dropdown">
+        <img src="src/assets/profile-photo.jpg" class="header-nav-profile-dropdown-profile-photo" alt="profile-photo">
+        <p>John Doe</p>
+        <img src="src/assets/dropdown-icon@3x.png" class="header-nav-profile-dropdown-icon" alt="dropdown-icon">
+      </div>
+    </nav>
+  </header>
 
+  <main class="main-container">
+
+    <aside class="aside-panel">
+
+      <section class="add-book-btn-section">
+        <a href="#0" class="add-book-btn">
+          <img src="src/assets/add-a-book-icon@3x.png" alt="add-book-icon">
+          <p>Add a Book</p>
+        </a>
+      </section>
+
+      <section class="nav-section">
+        <nav>
+          <a href="#0">Now Reading</a>
+          <a href="#0">Browse</a>
+          <a href="#0">Buy Books</a>
+          <a href="#0">Favourite Books</a>
+          <a href="#0">Wishlist</a>
+          <a href="#0">History</a>
+        </nav>
+      </section>
+
+      <section class="filter-section">
+        <ul>
+          <li>Must Read Titles</li>
+          <li>Best Of List</li>
+          <li>Clasic Novels</li>
+          <li>Non Fiction</li>
+        </ul>
+      </section>
+
+      <section class="history-section">
+        <ul>
+          <li>
+            <p>You added <strong>Fight Club</strong> by <strong>Chuck Palahniuk</strong> to your <strong>Must Read Titles</strong>.</p>
+            <p><time>24</time> minutes ago</p>
+          </li>
+          <li>
+            <p>You added <strong>The Trial</strong> by <strong>Kafka </strong> to your <strong>Must Read Titles</strong>.</p>
+            <p><time>24</time> minutes ago</p>
+          </li>
+        </ul>
+      </section>
+
+    </aside>
+
+    <div class="main-content">
+    </div>
+
+  </main>
+
+  <footer class="footer-container">
+    <nav class="footer-nav">
+      <a href="#0" class="footer-nav-help"><img src="src/assets/help-icon@3x.png" alt="help-icon"></a>
+      <a href="#0" class="footer-nav-settings"><img src="src/assets/settings-icon@3x.png" alt="settings-icon"></a>
+    </nav>
+  </footer>
 </body>
 
 </html>
