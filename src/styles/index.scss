@@ -4,144 +4,90 @@ $header-text-color:#78829d;
 $header-font-size: 12px;
 $highlight-background: #15a4fa;
 $highlight-background-font-color: #fff;
-$aside-background: #1f2637;
+$side-panel-background: #141824;
+$side-panel-section-background:#1f2637;
 $footer-background: #181e2c;
 $footer-icon-color: #1f2637;
-
 body {
   font-family: $font-family, sans-serif;
-  line-height: normal;
   p {
     padding: 0;
     margin: 0;
   }
 }
 
-.header-container {
-  align-items: center;
-  background-color: $header-background;
-  color: $header-text-color;
-  display: flex;
-  justify-content: space-between;
-  font-size: $header-font-size;
-  height: 45px;
-  width: 100%;
-}
-
-.header-logo {
-  margin-left: 20px;
-}
-
-.header-title {
-  display: flex;
-  align-items: center;
-  position: absolute;
-  right: 50%;
-  transform: translate(50%);
-
-  img {
+.header {
+  &-container {
+    align-items: center;
+    background-color: $header-background;
+    color: $header-text-color;
+    display: flex;
+    justify-content: space-between;
+    font-size: $header-font-size;
+    height: 45px;
+    width: 100%;
+  }
+  &-logo {
+    margin-left: 20px;
+  }
+  &-title {
+    display: flex;
+    align-items: center;
     position: absolute;
-    height: 12px;
-    width: 12px;
-    left: -14px;
+    right: 50%;
+    transform: translate(50%);
+    img {
+      position: absolute;
+      height: 12px;
+      width: 12px;
+      left: -14px;
+    }
   }
-}
-
-.header-nav {
-  display: flex;
-  flex-direction: row;
-  align-items: center;
-
-  a {
-    color: inherit;
-    text-decoration: none;
-    margin: 0 16px;
-  }
-
-  &-circle-separator {
-    background-color: black;
-    border-radius: 50%;
-    height: 4px;
-    width: 4px;
-  }
-
-  &-profile-dropdown {
-    background-color: $highlight-background;
+  &-nav {
     display: flex;
     flex-direction: row;
     align-items: center;
-    height: 100%;
-
-    &-profile-photo {
-      margin: 0 12px;
-      border-radius: 50%;
-    }
-
-    p {
-      color: $highlight-background-font-color;
-    }
-
-    &-icon {
-      color: $highlight-background-font-color;
+    a {
+      color: inherit;
+      text-decoration: none;
       margin: 0 16px;
-      width: 12px;
-      height: 12px;
-      align-self: center;
+    }
+    &-circle-separator {
+      background-color: black;
+      border-radius: 50%;
+      height: 4px;
+      width: 4px;
+    }
+    &-profile-dropdown {
+      background-color: $highlight-background;
+      display: flex;
+      flex-direction: row;
+      align-items: center;
+      height: 100%;
+      &-profile-photo {
+        margin: 0 12px;
+        border-radius: 50%;
+      }
+      p {
+        color: $highlight-background-font-color;
+      }
+      &-icon {
+        color: $highlight-background-font-color;
+        margin: 0 16px;
+        width: 12px;
+        height: 12px;
+        align-self: center;
+      }
     }
   }
 }
 
-main {
-  position: relative;
-  height: 100%;
-
-  aside {
+.main {
+  &-conteiner {
+    position: relative;
     height: 100%;
-    width: 200px;
-    background-color: $aside-background;
-    float: left;
-
-    section {
-      display: block;
-      margin-bottom: 4px;
-    }
-
-    .add-book-btn {
-      position: relative;
-      text-decoration: none;
-      display: block;
-      width: 160px;
-      height: 44px;
-      border-radius: 4px;
-      background-color: #f2795a;
-      margin: 35px 20px;
-
-      img {
-        width: 14px;
-        height: 14px;
-        position: absolute;
-        right: 50%;
-        bottom: 50%;
-        transform: translate(50%, 50%);
-      }
-
-      span {
-        position: absolute;
-        right: 50%;
-        bottom: 50%;
-        transform: translate(50%, 50%);
-      }
-    }
-
-    .nav-section {
-      nav{
-        display: block;
-      }
-
-    }
   }
-
-  .main-content {
+  &-content {
     display: block;
     margin-left: 200px;
     height: 100%;
@@ -149,39 +95,71 @@ main {
   }
 }
 
-.footer-container {
-  background-color: $footer-background;
-  width: 100%;
-  height: 45px;
-}
-
-.footer-nav {
-  float: right;
-  height: 100%;
-
-  a {
-    position: relative;
-    display: inline-block;
+.side-panel {
+  &-container {
     height: 100%;
-    width: 55px;
-
-    img {
-      position: absolute;
-      height: 14px;
-      width: 14px;
-      right: 50%;
-      bottom: 50%;
-      transform: translate(50%, 50%);
+    width: 200px;
+    background-color: $side-panel-background;
+    float: left;
+    section {
+      display: block;
+      background-color: $side-panel-section-background;
+      margin-bottom: 4px;
     }
   }
-
-  &-help {
-    background-color: $footer-icon-color;
-    color: $highlight-background-font-color;
+  &-add-book-section {
+    button {
+      vertical-align: middle;
+      margin: 35px 20px;
+      width: 160px;
+      height: 44px;
+      background-color: #f2795a;
+      border: none;
+      border-radius: 4px;
+      img {
+        width: 14px;
+        height: 14px;
+      }
+    }
   }
+  &-nav-section {
+    nav {
+      display: block;
+    }
+  }
+}
 
-  &-settings {
-    background-color: $highlight-background;
-    color: $highlight-background-font-color;
+.footer {
+  &-container {
+    background-color: $footer-background;
+    width: 100%;
+    height: 45px;
+  }
+  &-nav {
+    float: right;
+    height: 100%;
+    a {
+      position: relative;
+      display: inline-block;
+      margin: 0;
+      height: 100%;
+      width: 55px;
+      img {
+        position: absolute;
+        right: 50%;
+        bottom: 50%;
+        height: 14px;
+        width: 14px;
+        transform: translate(50%, 50%);
+      }
+    }
+    &-help {
+      background-color: $footer-icon-color;
+      color: $highlight-background-font-color;
+    }
+    &-settings {
+      background-color: $highlight-background;
+      color: $highlight-background-font-color;
+    }
   }
 }

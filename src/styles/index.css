@@ -1,6 +1,5 @@
 body {
-  font-family: "Roboto", sans-serif;
-  line-height: normal; }
+  font-family: "Roboto", sans-serif; }
   body p {
     padding: 0;
     margin: 0; }
@@ -61,45 +60,40 @@ body {
       height: 12px;
       align-self: center; }
 
-main {
+.main-conteiner {
   position: relative;
   height: 100%; }
-  main aside {
-    height: 100%;
-    width: 200px;
-    background-color: #1f2637;
-    float: left; }
-    main aside section {
-      display: block;
-      margin-bottom: 4px; }
-    main aside .add-book-btn {
-      position: relative;
-      text-decoration: none;
-      display: block;
-      width: 160px;
-      height: 44px;
-      border-radius: 4px;
-      background-color: #f2795a;
-      margin: 35px 20px; }
-      main aside .add-book-btn img {
-        width: 14px;
-        height: 14px;
-        position: absolute;
-        right: 50%;
-        bottom: 50%;
-        transform: translate(50%, 50%); }
-      main aside .add-book-btn span {
-        position: absolute;
-        right: 50%;
-        bottom: 50%;
-        transform: translate(50%, 50%); }
-    main aside .nav-section nav {
-      display: block; }
-  main .main-content {
+
+.main-content {
+  display: block;
+  margin-left: 200px;
+  height: 100%;
+  background-color: slateblue; }
+
+.side-panel-container {
+  height: 100%;
+  width: 200px;
+  background-color: #141824;
+  float: left; }
+  .side-panel-container section {
     display: block;
-    margin-left: 200px;
-    height: 100%;
-    background-color: slateblue; }
+    background-color: #1f2637;
+    margin-bottom: 4px; }
+
+.side-panel-add-book-section button {
+  vertical-align: middle;
+  margin: 35px 20px;
+  width: 160px;
+  height: 44px;
+  background-color: #f2795a;
+  border: none;
+  border-radius: 4px; }
+  .side-panel-add-book-section button img {
+    width: 14px;
+    height: 14px; }
+
+.side-panel-nav-section nav {
+  display: block; }
 
 .footer-container {
   background-color: #181e2c;
@@ -112,14 +106,15 @@ main {
   .footer-nav a {
     position: relative;
     display: inline-block;
+    margin: 0;
     height: 100%;
     width: 55px; }
     .footer-nav a img {
       position: absolute;
-      height: 14px;
-      width: 14px;
       right: 50%;
       bottom: 50%;
+      height: 14px;
+      width: 14px;
       transform: translate(50%, 50%); }
   .footer-nav-help {
     background-color: #1f2637;
