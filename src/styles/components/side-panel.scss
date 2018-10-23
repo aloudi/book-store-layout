@@ -1,0 +1,113 @@
+.side-panel {
+  &-container{
+    overflow-x: hidden;
+    background-color: $side-panel-background;
+  }
+  &-container>section {
+    display: block;
+    margin-bottom: 8px;
+    background-color: $side-panel-section-background;
+  }
+  &-container>section:last-child {
+    margin-bottom: 0px;
+  }
+  &-add-book-section>button {
+    vertical-align: middle;
+    padding: 0;
+    margin: 35px 20px;
+    width: 160px;
+    height: 44px;
+    background-color: $add-book-btn-background-color;
+    color: $add-book-btn-text-color;
+    border: none;
+    border-radius: 4px;
+    img {
+      width: 14px;
+      height: 14px;
+      margin-right: 6px;
+    }
+    span {
+      font-weight: bold;
+    }
+  }
+  &-add-book-section>button:hover {
+    cursor: pointer;
+  }
+  &-nav-section-link {
+    display: block;
+    padding: 14px 0 14px;
+    width: 100%;
+    font-size: 12px;
+    img {
+      vertical-align: middle;
+      display: inline-block;
+      margin-left: 20px;
+      height: 12px;
+      width: 12px;
+    }
+    span {
+      display: inline-block;
+      vertical-align: middle;
+    }
+  }
+  &-nav-section-link:hover {
+    background-color: $highlight-background;
+  }
+  &-filter-section {
+    ul {
+      padding: 14px 0;
+    }
+    li {
+      margin-left: 24px;
+      padding: 14px 0;
+    }
+    span {
+      display: inline-block;
+      vertical-align: center;
+    }
+    &-circle-red {
+      @include circle(6px, #e64c66);
+      margin-right: 14px;
+      vertical-align: middle;
+    }
+    &-circle-yellow {
+      @include circle(6px, #ffab00);
+      margin-right: 14px;
+    }
+    &-circle-blue {
+      @include circle(6px, #00bfdd);
+      margin-right: 14px;
+    }
+    &-circle-purple {
+      @include circle(6px, #7874cf);
+      margin-right: 14px;
+    }
+  }
+  &-history-section {
+    height: auto;
+    padding: 36px 0;
+    li {
+      margin-bottom: 20px;
+    }
+    img {
+      margin-left: 21px;
+      margin-right: 10px;
+      display: inline-block;
+      bottom: 50px;
+      height: 14px;
+      width: 14px;
+      vertical-align: top;
+    }
+    section {
+      display: inline-block;
+      width: 130px;
+      p {
+        line-height: 1.5;
+      }
+      span {
+        display: block;
+        margin-top: 18px;
+      }
+    }
+  }
+}

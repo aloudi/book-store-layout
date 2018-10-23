@@ -1,0 +1,27 @@
+.footer-nav {
+  float: right;
+  height: 100%;
+  a {
+    position: relative;
+    display: inline-block;
+    margin: 0;
+    height: 100%;
+    width: 55px;
+    img {
+      position: absolute;
+      right: 50%;
+      bottom: 50%;
+      height: 14px;
+      width: 14px;
+      transform: translate(50%, 50%);
+    }
+  }
+  &-help {
+    background-color: $footer-icon-color;
+    color: $highlight-background-font-color;
+  }
+  &-settings {
+    background-color: $highlight-background;
+    color: $highlight-background-font-color;
+  }
+}

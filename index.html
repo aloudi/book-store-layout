@@ -7,7 +7,6 @@
   <title>Book Store</title>
   <meta name="viewport" content="width=device-width, height=device-height, initial-scale=1">
   <link href="https://fonts.googleapis.com/css?family=Roboto" rel="stylesheet">
-  <link rel="stylesheet" type="text/css" media="screen" href="node_modules/normalize.css/normalize.css" />
   <link rel="stylesheet" type="text/css" media="screen" href="src/styles/index.css" />
   <script src="src/index.js"></script>
 </head>
@@ -18,7 +17,7 @@
       <p>Logo Placeholder</p>
     </div>
     <div class="header-title">
-      <img src="src/assets/book-icon.png" alt="book-icon">
+      <img src="src/assets/icons/book-icon.png" alt="book-icon">
       <p>MyBookStoreApp</p>
     </div>
     <nav class="header-nav">
@@ -26,68 +25,176 @@
       <div class="header-nav-circle-separator"></div>
       <a href="#0">Our Support</a>
       <div class="header-nav-profile-dropdown">
-        <img src="src/assets/profile-photo.jpg" class="header-nav-profile-dropdown-profile-photo" alt="profile-photo">
+        <img src="src/assets/photos/profile-photo.jpg" class="header-nav-profile-dropdown-profile-photo" alt="profile-photo">
         <p>John Doe</p>
-        <img src="src/assets/dropdown-icon@3x.png" class="header-nav-profile-dropdown-icon" alt="dropdown-icon">
+        <img src="src/assets/icons/dropdown-icon.png" class="header-nav-profile-dropdown-icon" alt="dropdown-icon">
       </div>
     </nav>
   </header>
 
-  <main class="main-container">
 
+  <main class="main">
     <aside class="side-panel-container">
 
       <section class="side-panel-add-book-section">
         <button>
-          <img src="src/assets/add-a-book-icon@3x.png" alt="+">
-          <span>Add a Book</span>
+          <img src="src/assets/icons/add-a-book-icon.png" alt="+">
+          <span class="to-upper-case">Add a Book</span>
         </button>
       </section>
 
       <section class="side-panel-nav-section">
         <nav>
-          <a href="#0">Now Reading</a>
-          <a href="#0">Browse</a>
-          <a href="#0">Buy Books</a>
-          <a href="#0">Favourite Books</a>
-          <a href="#0">Wishlist</a>
-          <a href="#0">History</a>
+          <a class="side-panel-nav-section-link" href="#0">
+            <img src="src/assets/icons/now-reading-icon.png" alt="now-reading-icon">
+            <span>Now Reading</span>
+          </a>
+          <a class="side-panel-nav-section-link" href="#0">
+            <img src="src/assets/icons/browse-icon.png" alt="browse-icon">
+            <span>Browse</span>
+          </a>
+          <a class="side-panel-nav-section-link" href="#0">
+            <img src="src/assets/icons/buy-books-icon.png" alt="buy-books-icon">
+            <span>Buy Books</span>
+          </a>
+          <a class="side-panel-nav-section-link" href="#0">
+            <img src="src/assets/icons/favourite-books-icon.png" alt="favourite-books-icon">
+            <span>Favourite Books</span>
+          </a>
+          <a class="side-panel-nav-section-link" href="#0">
+            <img src="src/assets/icons/wishlist-icon.png" alt="wishlist-icon">
+            <span>Wishlist</span>
+          </a>
+          <a class="side-panel-nav-section-link" href="#0">
+            <img src="src/assets/icons/history-icon.png" alt="history-icon">
+            <span>History</span>
+          </a>
         </nav>
       </section>
 
       <section class="side-panel-filter-section">
         <ul>
-          <li>Must Read Titles</li>
-          <li>Best Of List</li>
-          <li>Clasic Novels</li>
-          <li>Non Fiction</li>
+          <li>
+            <span class="side-panel-filter-section-circle-red"></span>
+            <span>Must Read Titles</span>
+          </li>
+          <li>
+            <span class="side-panel-filter-section-circle-yellow"></span>
+            <span>Best Of List</span>
+          </li>
+          <li>
+            <span class="side-panel-filter-section-circle-blue"></span>
+            <span>Clasic Novels</span>
+          </li>
+          <li>
+            <span class="side-panel-filter-section-circle-purple"></span>
+            <span>Non Fiction</span>
+          </li>
         </ul>
       </section>
 
       <section class="side-panel-history-section">
         <ul>
           <li>
-            <p>You added <strong>Fight Club</strong> by <strong>Chuck Palahniuk</strong> to your <strong>Must Read Titles</strong>.</p>
-            <p><time>24</time> minutes ago</p>
+            <img src="/src/assets/icons/history-icon.png" alt="history-icon">
+            <section>
+              <p>You added <strong>Fight Club</strong> by <strong>Chuck Palahniuk</strong> to your <strong>Must Read
+                  Titles</strong>.</p>
+              <span><time>24</time> minutes ago</span>
+            </section>
           </li>
           <li>
-            <p>You added <strong>The Trial</strong> by <strong>Kafka </strong> to your <strong>Must Read Titles</strong>.</p>
-            <p><time>24</time> minutes ago</p>
+            <img src="/src/assets/icons/history-icon.png" alt="history-icon">
+            <section>
+              <p>You added <strong>The Trial</strong> by <strong>Kafka </strong> to your <strong>Must Read Titles</strong>.</p>
+              <span><time>24</time> minutes ago</span>
+            </section>
           </li>
         </ul>
       </section>
 
     </aside>
-
-    <div class="main-content">
-    </div>
-
+    <section class="main-container">
+      <header class="main-header">
+        <section class="main-header-heading">
+          <h1>Browse Available Books</h1>
+        </section>
+        <section class="main-header-filter-and-search">
+          <nav class="main-header-filter-and-search-filter">
+            <ul>
+              <li>All Books</li>
+              <li>Most Recent</li>
+              <li>Most Popular</li>
+              <li>Free Books</li>
+            </ul>
+          </nav>
+          <form onSubmit="console.log('search')" class="main-header-filter-and-search-search">
+            <input type="text" placeholder="Enter Keywords">
+            <img src="src/assets/icons/search-icon.png" alt="search-icon">
+          </form>
+        </section>
+      </header>
+      <section class="main-books">
+        <ul class="main-books-container">
+          <li class="main-books-book">
+            <img src="./src/assets/photos/book-cover1.png" alt="book-cover">
+            <h2>Jewels of Nizam</h2>
+            <small>by Geeta Devi</small>
+          </li>
+          <li class="main-books-book">
+            <img src="./src/assets/photos/book-cover2.png" alt="book-cover">
+            <h2>Cakes & Bakes</h2>
+            <small>by Sanjeev Kapoor</small>
+          </li>
+          <li class="main-books-book">
+            <img src="./src/assets/photos/book-cover3.png" alt="book-cover">
+            <h2>Jamie’s Kitchen</h2>
+            <small>by Jamie Oliver</small>
+          </li>
+          <li class="main-books-book">
+            <img src="./src/assets/photos/book-cover4.png" alt="book-cover">
+            <h2>Inexpensive Family Meals</h2>
+            <small>by Simon Holst</small>
+          </li>
+          <li class="main-books-book">
+            <img src="./src/assets/photos/book-cover5.png" alt="book-cover">
+            <h2>Paleo Slow Cooking</h2>
+            <small>by Chrissy Gower</small>
+          </li>
+          <li class="main-books-book">
+            <img src="./src/assets/photos/book-cover6.png" alt="book-cover">
+            <h2>Cook Like an Italian</h2>
+            <small>by Tobie Puttock</small>
+          </li>
+          <li class="main-books-book">
+            <img src="./src/assets/photos/book-cover7.png" alt="book-cover">
+            <h2>Suneeta Vaswani</h2>
+            <small>by Geeta Devi</small>
+          </li>
+          <li class="main-books-book">
+            <img src="./src/assets/photos/book-cover8.png" alt="book-cover">
+            <h2>Jamie Does</h2>
+            <small>by Jamie Oliver</small>
+          </li>
+          <li class="main-books-book">
+            <img src="./src/assets/photos/book-cover9.png" alt="book-cover">
+            <h2>Jamie’s italy</h2>
+            <small>by Jamie Oliver</small>
+          </li>
+          <li class="main-books-book">
+            <img src="./src/assets/photos/book-cover10.png" alt="book-cover">
+            <h2>Vegetables Cookbook</h2>
+            <small>by Matthew Biggs</small>
+          </li>
+        </ul>
+      </section>
+    </section>
   </main>
 
   <footer class="footer-container">
     <nav class="footer-nav">
-      <a href="#0" class="footer-nav-help"><img src="src/assets/help-icon@3x.png" alt="help-icon"></a>
-      <a href="#0" class="footer-nav-settings"><img src="src/assets/settings-icon@3x.png" alt="settings-icon"></a>
+      <a href="#0" class="footer-nav-help"><img src="src/assets/icons/help-icon.png" alt="help-icon"></a>
+      <a href="#0" class="footer-nav-settings"><img src="src/assets/icons/settings-icon.png" alt="settings-icon"></a>
     </nav>
   </footer>
 </body>

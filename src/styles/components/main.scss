@@ -1,0 +1,78 @@
+.main {
+  &-header {
+    &>section {
+      background-color: $main-header-background;
+      border: solid 1px #dadfea;
+    }
+    &-heading {
+      display: block;
+      padding: 28px 0 28px 24px;
+      h1 {
+        color: $main-header-heading-font-color;
+        font-size: 22px;
+      }
+    }
+    &-filter-and-search {
+      display: flex;
+      flex-direction: row;
+      justify-content: space-between;
+      align-items: center;
+      &-filter {
+        margin-left: 24px;
+        li {
+          display: inline-block;
+          padding: 6px;
+          color: #8c97b2;
+          border-radius: 16px;
+        }
+        li:hover {
+          cursor: pointer;
+          color: lighten($color: #8c97b2, $amount: 40%);
+          background-color: #97b3ce;
+        }
+      }
+      &-search {
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        margin: 12px 12px 12px 0;
+        width: 400px;
+        height: 36px;
+        border-radius: 16px;
+        background-color: white;
+        input {
+          flex-grow: 1;
+          background: transparent;
+          border: none;
+          margin-left: 12px;
+          padding: 0;
+        }
+        input:focus {
+          outline: none;
+        }
+        img {
+          height: 12px;
+          width: 12px;
+          margin-right: 12px
+        }
+      }
+    }
+  }
+  &-books-book {
+    margin: 30px 20px;
+    img {
+      width: 200px;
+      height: 275px;
+    }
+    h2 {
+      margin-top: 16px;
+    }
+    small {
+      display: inline-block;
+      margin-top: 6px;
+    }
+  }
+  &-books-book:hover {
+    cursor: pointer;
+  }
+}

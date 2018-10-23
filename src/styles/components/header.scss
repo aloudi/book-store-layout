@@ -1,0 +1,55 @@
+.header {
+  &-container {
+    background-color: $header-background;
+    color: $text-color;
+    font-size: $header-font-size;
+  }
+  &-logo {
+    margin-left: 20px;
+  }
+  &-title {
+    display: flex;
+    align-items: center;
+    position: absolute;
+    right: 50%;
+    transform: translate(50%);
+    &>img {
+      position: absolute;
+      height: 12px;
+      width: 12px;
+      left: -14px;
+    }
+  }
+  &-nav {
+    display: flex;
+    align-items: center;
+    flex-direction: row;
+    &>a {
+      margin: 0 16px;
+    }
+    &-circle-separator {
+      @include circle(4px, black)
+    }
+    &-profile-dropdown {
+      display: flex;
+      align-items: center;
+      flex-direction: row;
+      height: 100%;
+      &-profile-photo {
+        margin: 0 12px;
+        border-radius: 50%;
+      }
+      background-color: $highlight-background;
+      p {
+        color: $highlight-background-font-color;
+      }
+      &-icon {
+        margin: 0 16px;
+        width: 12px;
+        height: 12px;
+        align-self: center;
+        color: $highlight-background-font-color;
+      }
+    }
+  }
+}
